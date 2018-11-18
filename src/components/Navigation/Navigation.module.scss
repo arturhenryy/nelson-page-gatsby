@@ -1,0 +1,118 @@
+@import "../../../config/variables";
+
+.wrapper {
+  align-items: center;
+  display: flex;
+
+  a {
+    color: $body-color;
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  line-height: 1;
+  backface-visibility: hidden;
+  background-color: transparent;
+  user-select: none;
+  z-index: 9999;
+  @include for-desktop-up {
+    padding: 3rem 4rem 1rem 4rem!important;
+  }
+}
+
+.headerContainer {
+  display: flex;
+  font-size: 28px;
+}
+
+.navigation > span {
+  margin-right: auto;
+}
+
+
+.navigation {
+  display: none;
+  @include for-tablet-landscape-up {
+    display: block;
+  }
+  a {
+    margin-right: 3rem;
+    font-size: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: inherit;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
+
+.name {
+  margin-right: auto;
+  display: none;
+  @include for-tablet-landscape-up {
+    display: block;
+  }
+  h3 {
+    font-size: 29px;
+    font-weight: normal;
+    margin-bottom: 0 !important;
+  }
+
+  a {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.mobileNav {
+  background-color: transparent;
+  display: block;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 2rem;
+  }
+}
+
+.mobileNavName {
+  left: 1rem;
+  position: fixed;
+  top: 1rem;
+
+  h3 {
+    font-size: 23px !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+.mobileNavSocialMedia {
+  font-size: 1.5rem;
+  margin-top: 6rem;
+
+  a:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../../config/variables";
+
+.infoSection {
+  max-width: 820px;
+  padding: 0 2rem;
+  @include for-tablet-landscape-up {
+    padding: 0;
+  }
+  p {
+    margin-bottom: 3rem;
+  }
+}
