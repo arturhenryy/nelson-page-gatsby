@@ -5,27 +5,15 @@ module.exports = {
   siteUrl: 'https://nelson-heinemann.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
-  siteDescription: 'Minimalistic bright portfolio with full-width grid and large images',
+  siteDescription: 'Nelson Heinemann is a fashion stylist and artist based in Munich, Germany working across europe.',
   siteFBAppID: '123456789', // Facebook App ID
-  userTwitter: '@emma', // Twitter Username
   // og: Meta Tags
   ogSiteName: 'Nelson Heinemann', // Facebook Site Name
   ogLanguage: 'de_DE',
-  googleAnalyticsID: 'UA-12345689-1',
-  copyright: 'Copyright © 2017. All rights reserved. Pictures by Unsplash.', // Copyright in the footer of the site
-  // You can translate these three words into your language if you want.
-  // They'll be shown on the project page header
-  client: 'Client',
-  date: 'Date',
-  service: 'Service',
-  // Date format used in your project header
-  // More information here: https://date-fns.org/v1.29.0/docs/format
-  dateFormat: 'DD.MM.YYYY',
-  // Manifest and Progress color
+  googleAnalyticsID: '',
   themeColor: '#3498DB',
-  backgroundColor: '#2b2e3c',
-  // Settings for typography.js
   headerFontFamily: 'Arial',
+  baseFontSize: 10,
   bodyFontFamily: 'Arial',
-  baseFontSize: '22px',
+  backgroundColor: '#2b2e3c',
 };

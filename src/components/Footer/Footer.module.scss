@@ -1,12 +1,16 @@
 @import "../../../config/variables";
 
 .footer {
-  margin-top: 14rem;
   padding: 4rem 2rem 7rem 2rem;
-  background: url('./footer-bg.jpg');
+  background: url('/footer-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: -1;
   @include for-tablet-landscape-up {
     padding: 8rem 3rem 14rem 3rem;
   }

@@ -11,47 +11,9 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-react-router-scroll',
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projects',
-        path: `${__dirname}/content/projects`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         include: '/assets/',
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1600,
-              quality: 90,
-              linkImagesToOriginal: false,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-              rel: 'nofollow noopener noreferrer',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-          },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
       },
     },
     {
@@ -60,15 +22,33 @@ module.exports = {
         color: config.themeColor,
       },
     },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        // The base url to your WP site.
+        baseUrl: 'web191.s165.goserver.host',
+        // baseUrl: 'wpgatsby.wtf',
+        // WP.com sites set to true, WP.org set to false
+        hostingWPCOM: false,
+        // The protocol. This can be http or https.
+        protocol: 'http',
+        // Use 'Advanced Custom Fields' Wordpress plugin
+        useACF: true,
+        auth: {},
+        // Set to true to debug endpoints on 'gatsby build'
+        verboseOutput: true,
+        excludedRoutes: [
+          "/*/*/comments",
+          "/yoast/**",
+          "/*/*/users",
+          "/*/users/me",
+          "/oembed/*"
+        ],
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography.jsx',
-      },
-    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-next',

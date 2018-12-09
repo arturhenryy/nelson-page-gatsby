@@ -3,6 +3,17 @@
 
 @import "../../config/variables";
 
+body {
+  font-family: Arial, serif;
+}
+
+.content {
+  min-height: 100vh;
+  background-color: #fff;
+  margin-bottom: 84vh;
+  padding-bottom: 8rem;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -72,6 +83,7 @@ h2 {
 }
 
 .container {
+  background: #ffffff;
   padding-top: 9rem;
   @include for-tablet-landscape-up {
     padding-top: 14rem;

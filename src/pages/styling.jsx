@@ -4,11 +4,19 @@ import Container from '../components/Container/Container';
 import config from '../../config/SiteConfig';
 
 const Contact = () => (
-  <div className="container contact-container">
+  <div className="container styling-container">
     <Helmet title={`Contact | ${config.siteTitle}`} />
-    <Container text>
-    </Container>
+    <div className="content">
+    </div>
   </div>
 );
 
 export default Contact;
+
+export const query = graphql`
+  query stylingPageQuery {
+    page: wordpressPage(slug: { eq: "styling" }) {
+      title
+    }
+  }
+`

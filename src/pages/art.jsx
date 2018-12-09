@@ -15,7 +15,7 @@ const exhibitions = [
 const Art = () => (
   <div className="container art-container">
     <Helmet title={`Contact | ${config.siteTitle}`} />
-    <Container text>
+    <div className="content">
       <div className="left-margin exhibtion-section section">
         <h2>Exhibitions</h2>
         <ul className={styles.exhibtionList}>
@@ -58,7 +58,7 @@ const Art = () => (
         </div>
         <img src="./digichloreans-artwork.jpg" alt="digichloreans-artwork" />
       </div>
-    </Container>
+    </div>
   </div>
 );
 
