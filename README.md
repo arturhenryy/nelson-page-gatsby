@@ -1,37 +1,7 @@
-![](https://i.imgur.com/M0nwIVi.png)
-
-# Gatsby Starter Portfolio: Emma
-
-A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
-
-[Demo Website](https://portfolio-emma.netlify.com/)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LeKoArts/gatsby-starter-portfolio-emma)
-
-- Full-width grid-layout
-- Large images
-- Light theme
-
-## Why?
-
-If you want to quickly bootstrap a design/photography portfolio or use it as a foundation for your personal site the *gatsby-starter-portfolio* are a perfect fit for you! The project's goal is to offer minimalistic and fast websites. 
-
-I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights).
-
-Also check out the other *gatsby-starter-portfolio*:
-- [gatsby-starter-portfolio-emilia](https://github.com/LeKoArts/gatsby-starter-portfolio-emilia)
-- [gatsby-starter-portfolio-bella](https://github.com/LeKoArts/gatsby-starter-portfolio-bella)
-- [gatsby-starter-portfolio-cara](https://github.com/LeKoArts/gatsby-starter-portfolio-cara)
-
-Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
+# Gatsby Page Nelson
 
 ## Features
 
-- Configurable
-    - Use the SiteConfig.js to easily change the most important information
-    - Easily change the font
-- Automatic colors for your projects (with the help of [vibrant.js](https://jariz.github.io/vibrant.js/))
-- Projects in Markdown
 - Google Analytics Support
 - SEO
     - Sitemap
@@ -40,7 +10,6 @@ Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfol
     - Twitter Tags
 - Offline Support
 - WebApp Manifest Support
-- Typography.js
 - Responsive images
     - The right image size for every screen size
     - Traced SVG loading (lazy-loading)
@@ -59,23 +28,19 @@ gatsby new project-name https://github.com/LeKoArts/gatsby-starter-portfolio-emm
 npm run dev
 ```
 
-### Adding a new project
-- Create a new folder in ``content/projects`` with the current date (Format: YYYY-MM-DD)
-- Create a new markdown file, add the frontmatter (use the same date format)
-- Add an image and reference it in your frontmatter as ``cover``
-- Write your content below the frontmatter
-
-If you're still unsure have a look at the already existing examples.
-
 ### Adding new features/plugins
 
 You can add other features by having a look at the offical [plugins page](https://www.gatsbyjs.org/docs/plugins/)
 
+use:
+yarn add "plugin-name" --save
+
 ### Building your site
 
 ```
-npm run build
+yarn build
 ```
+
 Copy the content of the ``public`` folder to your webhost or use a website like Netlify which automates that for you.
 
 ## Configuration
@@ -126,9 +91,6 @@ You can also configure the styling of the site by editing the SCSS variables in 
 // Configure your colors here
 
 $brand-primary: #cf1993;
-$brand-secondary: #7b8acc;
-$grey: #252525;
-$black: #000000;
 
 // Configure your grid here
 // You don't need to change it!

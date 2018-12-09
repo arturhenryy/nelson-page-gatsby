@@ -1,22 +1,52 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Container from '../components/Container/Container';
 import config from '../../config/SiteConfig';
+import styles from './styling.module.scss';
 
-const Contact = () => (
-  <div className="container styling-container">
-    <Helmet title={`Contact | ${config.siteTitle}`} />
-    <div className="content">
+export default ({ data }) => {
+
+  const { page } = data
+  const stylingImages = page.acf.styling_images
+  const stylingImagesMobile = page.acf.stylingImagesMobile
+
+  return (
+    <div className="container styling-container">
+      <Helmet title={`Contact | ${config.siteTitle}`} />
+      <div className="content">
+        <div className="styling-container">
+        {
+
+        }
+        </div>
+        <div className="styling-container-mobile">
+        {
+
+        }
+        </div>
+      </div>
     </div>
-  </div>
-);
-
-export default Contact;
+  )
+};
 
 export const query = graphql`
   query stylingPageQuery {
-    page: wordpressPage(slug: { eq: "styling" }) {
+    page: wordpressPage(slug: {eq: "styling"}) {
       title
+      acf {
+        styling_images {
+          styling_image {
+            localFile {
+              childImageSharp {
+                original {
+                  width
+                  height
+                  src
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 `

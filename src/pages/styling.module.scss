@@ -1,0 +1,15 @@
+@import '../../config/variables';
+
+.styling-container {
+  .styling-container-mobile {
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+  }
+  .styling-container {
+    display: none;
+    @include for-tablet-landscape-up {
+      display: block;
+    }
+  }
+}
