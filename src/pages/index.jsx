@@ -21,3 +21,11 @@ const Index = () => {
 };
 
 export default Index;
+
+export const query = graphql`
+  query homePageQuery {
+    page: wordpressPage(slug: { eq: "home" }) {
+      title
+    }
+  }
+`
