@@ -5,16 +5,18 @@ import Info from '../components/Info/Info';
 import Art from '../components/Art/Art';
 import Styling from '../components/Styling/Styling';
 
-const Index = () => {
+const Index = ({data}) => {
+  console.log(data)
+  const { page } = data
   return (
     <div className="index-container">
       <Helmet>
         <title>{config.siteTitle}</title>
       </Helmet>
       <div className="content">
-        <Styling />
-        <Art />
-        <Info />
+        <Styling keyVisual={page.acf.key_image} />
+        <Art artVisual={page.acf.art_image} />
+        <Info aboutText={page.acf.about_text} />
       </div>
     </div>
   );
@@ -26,6 +28,27 @@ export const query = graphql`
   query homePageQuery {
     page: wordpressPage(slug: { eq: "home" }) {
       title
+      acf {
+        key_image {
+          localFile {
+            childImageSharp {
+              sizes(maxWidth: 1366) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+        art_image {
+          localFile {
+            childImageSharp {
+              sizes(maxWidth: 1366) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+        about_text
+      }
     }
   }
 `

@@ -7,6 +7,16 @@ body {
   font-family: Arial, serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
 .content {
   min-height: 100vh;
   background-color: #fff;
@@ -91,7 +101,9 @@ h2 {
 }
 
 .left-margin {
-  margin-left: 15%;
+  @include for-tablet-landscape-up {
+    margin-left: 15%;
+  }
 }
 
 .section {
@@ -103,16 +115,11 @@ h2 {
   &.art-section {
     display: flex;
     flex-direction: column;
+    width: 100%;
     .big-link {
       margin-left: auto;
     }
   }
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .big-link {

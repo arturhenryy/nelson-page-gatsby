@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Img from "gatsby-image"
 import config from '../../config/SiteConfig';
 import styles from './styling.module.scss';
 
@@ -7,7 +8,7 @@ export default ({ data }) => {
 
   const { page } = data
   const stylingImages = page.acf.styling_images
-  const stylingImagesMobile = page.acf.stylingImagesMobile
+  const stylingImagesMobile = page.acf.styling_images_mobile
 
   return (
     <div className="container styling-container">
@@ -15,13 +16,12 @@ export default ({ data }) => {
       <div className="content">
         <div className="styling-container">
         {
-
+          stylingImages.map((image) => (
+            <Img sizes={image.styling_image.localFile.childImageSharp.sizes} alt="Styling Visual"/>
+          ))
         }
         </div>
         <div className="styling-container-mobile">
-        {
-
-        }
         </div>
       </div>
     </div>
@@ -37,10 +37,8 @@ export const query = graphql`
           styling_image {
             localFile {
               childImageSharp {
-                original {
-                  width
-                  height
-                  src
+                sizes(maxWidth: 1366) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }

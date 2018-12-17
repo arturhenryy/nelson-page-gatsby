@@ -1,9 +1,11 @@
 .stylingSection {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     margin-bottom: 9rem;
+    width: 100%;
+    .imageWrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
     .linkContainer {
         position: absolute;
         bottom: 10rem;
