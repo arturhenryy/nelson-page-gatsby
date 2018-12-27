@@ -20,7 +20,6 @@ img {
 .content {
   min-height: 100vh;
   background-color: #fff;
-  margin-bottom: 100vh;
   padding-bottom: 8rem;
 }
 
@@ -87,6 +86,12 @@ img {
   padding-bottom: 4rem;
 }
 
+.pr-4 {
+  @include for-tablet-landscape-up {
+    padding-right: 4rem;
+  }
+}
+
 h2 {
   font-size: 48px;
   margin-bottom: 2.5rem;
@@ -97,6 +102,22 @@ h2 {
   padding-top: 9rem;
   @include for-tablet-landscape-up {
     padding-top: 14rem;
+  }
+  &.art-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include for-tablet-landscape-up {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &.about-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include for-tablet-landscape-up {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -116,6 +137,14 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 0 1rem;
+    z-index: 2;
+    @include for-tablet-landscape-up {
+      padding: 0;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .big-link {
       margin-left: auto;
     }
@@ -123,9 +152,12 @@ h2 {
 }
 
 .big-link {
-  font-size: 28px;
+  font-size: 1rem;
   text-decoration: none;
   transition: 0.3s ease;
+  @include for-tablet-landscape-up {
+    font-size: 28px;
+  }
   &:after {
     content: "";
     background: url("./arrow-right.png");
@@ -138,6 +170,20 @@ h2 {
   }
   &:hover {
     color: $brand-primary;
+  }
+}
+
+.overlay-logo {
+  position: fixed;
+  top: 150px;
+  width: 90%;
+  left: 50%;
+  pointer-events: none;
+  z-index: 1;
+  transform: translateX(-50%);
+  @include for-tablet-landscape-up {
+    width: 80%;
+    max-width: 940px;
   }
 }
 

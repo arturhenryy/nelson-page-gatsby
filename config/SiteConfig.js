@@ -4,9 +4,9 @@ module.exports = {
   siteTitleAlt: 'Nelson Heinemann', // Alternative Site title for SEO
   siteUrl: 'https://nelson-heinemann.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
+  siteLogo: '/logos/logo.png', // Used for SEO and manifest
+  siteDefaultImage: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Nelson Heinemann is a fashion stylist and artist based in Munich, Germany working across europe.',
-  siteFBAppID: '123456789', // Facebook App ID
   // og: Meta Tags
   ogSiteName: 'Nelson Heinemann', // Facebook Site Name
   ogLanguage: 'de_DE',

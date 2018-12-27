@@ -7,7 +7,7 @@ const About = () => (
   <div className="container about-container">
     <Helmet title={`About | ${config.siteTitle}`} />
     <div className="content">
-      <div className="left-margin section">
+      <div className="left-margin section pr-4">
         <h2>About myself</h2>
         <p>
         Nelson Heinemann is a fashion stylist and artist based in Munich, Germany working across europe.

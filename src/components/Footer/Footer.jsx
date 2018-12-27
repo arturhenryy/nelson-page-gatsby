@@ -4,7 +4,6 @@ import styles from './Footer.module.scss';
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <h3>Nelson Heinemann</h3>
     <nav className={styles.footerNavigation}>
       <ul>
         <li>

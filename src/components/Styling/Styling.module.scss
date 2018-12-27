@@ -8,11 +8,13 @@
     }
     .linkContainer {
         position: absolute;
-        bottom: 10rem;
+        bottom: 4rem;
         left: 50%;
         transform: translateX(-50%);
         a {
             color: #fff;
+            text-align: center;
+            white-space: nowrap;
             &:after {
                 filter: invert(100%);
             }

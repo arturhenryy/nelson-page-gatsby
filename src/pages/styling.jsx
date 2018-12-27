@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Img from "gatsby-image"
 import config from '../../config/SiteConfig';
-import styles from './styling.module.scss';
 
 export default ({ data }) => {
 
@@ -20,8 +19,6 @@ export default ({ data }) => {
             <Img sizes={image.styling_image.localFile.childImageSharp.sizes} alt="Styling Visual"/>
           ))
         }
-        </div>
-        <div className="styling-container-mobile">
         </div>
       </div>
     </div>
