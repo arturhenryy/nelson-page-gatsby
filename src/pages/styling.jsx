@@ -15,8 +15,11 @@ export default ({ data }) => {
       <div className="content">
         <div className="styling-container">
         {
-          stylingImages.map((image) => (
-            <Img sizes={image.styling_image.localFile.childImageSharp.sizes} alt="Styling Visual"/>
+          stylingImages.map((image, index) => (
+            <div className="image-container">
+              <Img sizes={image.styling_image.localFile.childImageSharp.sizes} key={index} alt="Styling Visual"/>
+              {image.styling_image.caption && <div dangerouslySetInnerHTML={{__html: image.styling_image.caption}} />}
+            </div>
           ))
         }
         </div>
@@ -32,6 +35,7 @@ export const query = graphql`
       acf {
         styling_images {
           styling_image {
+            caption
             localFile {
               childImageSharp {
                 sizes(maxWidth: 1366) {

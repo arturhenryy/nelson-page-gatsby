@@ -15,7 +15,7 @@ He worked for clients like Neue Züricher Zeitung, Condé Nast Germany, GLAMOUR 
         </p>
         <p className="mt-2">
           For business inquiries: <br />
-          <a href="mailto:nelson.heinemann@gmail">nelson.heinemann@gmail </a>
+          <a href="mailto:nelson.heinemann@gmail.com">nelson.heinemann@gmail.com </a>
         </p>
         <div className={styles.aboutBottomSection}>
           <p>
@@ -27,11 +27,7 @@ He worked for clients like Neue Züricher Zeitung, Condé Nast Germany, GLAMOUR 
             <br />
             <a href="https://www.facebook.com/nelson.heinemann" rel="noopener noreferrer" target="_blank">
               Facebook
-            </a>
-            <br />
-            <a href="https://www.pinterest.de/nelsonheinemann/" rel="noopener noreferrer" target="_blank">
-              Pinterest
-            </a>
+            </a>           
           </p>
           <img src="./portrait.jpg" alt="portrait" />
         </div>
