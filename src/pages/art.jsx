@@ -25,15 +25,26 @@ export default ({ data }) => {
           artProjects.map((project, index) => {
             return (
               <div className="section" key={project.art_project_link}>
+                {
+                  project.art_project_title && (
+                    <div className="left-margin">
+                      <h2>{project.art_project_title}</h2>
+                    </div>
+                  )
+                }
                 <Img sizes={project.art_project_image.localFile.childImageSharp.sizes} alt="Illustration Artwork"/>
-                <a
-                  href={project.art_project_link}
-                  className="big-link left-margin"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {project.art_project_link_text}
-                </a>
+                {
+                  project.art_project_link && (
+                    <a
+                      href={project.art_project_link}
+                      className="big-link left-margin"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {project.art_project_link_text}
+                    </a>
+                  )
+                }
               </div>
             )
           })
