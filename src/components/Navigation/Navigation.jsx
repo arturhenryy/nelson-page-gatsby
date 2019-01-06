@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import { slide as Menu } from 'react-burger-menu';
 import config from '../../../config/SiteConfig';
-import styles from './Navigation.module.scss';
+import './Navigation.scss';
 import './Headroom.scss';
 
 
@@ -25,15 +25,15 @@ export default class Navigation extends Component {
   render() {
     return (
       <header>
-        <div className={styles.headerContainer}>
-          <div className={styles.name}>
+        <div className="header-container">
+          <div className="name">
             <span>
               <Link to="/">
                 <h3>{config.siteTitle}</h3>
               </Link>
             </span>
           </div>
-          <nav className={styles.navigation}>
+          <nav className="navigation">
             <Link to="/styling" activeClassName="is-active">
               Styling
             </Link>
@@ -45,13 +45,13 @@ export default class Navigation extends Component {
             </Link>
           </nav>
         </div>
-        <div className={styles.mobileNav}>
-          <div className={styles.mobileNavName}>
+        <div className="mobile-nav">
+          <div className="mobile-nav-name">
             <Link to="/">
               <h3>{config.siteTitle}</h3>
             </Link>
           </div>
-          <div className={styles.menu}>
+          <div className="menu">
             <Menu
               isOpen={this.state.menuOpen}
               onStateChange={this.handleStateChange}
@@ -59,16 +59,16 @@ export default class Navigation extends Component {
               customCrossIcon={<span>Menu</span>}
               width="100%"
             >
-              <Link to="/styling" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/styling" activeClassName="is-active" onClick={() => this.closeMenu()}>
                 Styling
               </Link>
-              <Link to="/art" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/art" activeClassName="is-active" onClick={() => this.closeMenu()}>
                 Art & Exhibitions
               </Link>
-              <Link to="/about" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/about" activeClassName="is-active" onClick={() => this.closeMenu()}>
                 About
               </Link>
-              <Link to="/imprint" activeClassName="active" onClick={() => this.closeMenu()}>
+              <Link to="/imprint" activeClassName="is-active" onClick={() => this.closeMenu()}>
                 Imprint
               </Link>
             </Menu>

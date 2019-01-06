@@ -16,8 +16,8 @@ export default ({ data }) => {
         <div className="styling-container">
         {
           stylingImages.map((image, index) => (
-            <div className="image-container">
-              <Img sizes={image.styling_image.localFile.childImageSharp.sizes} key={index} alt="Styling Visual"/>
+            <div className="image-container" key={index}>
+              <Img sizes={image.styling_image.localFile.childImageSharp.sizes} alt="Styling Visual"/>
               {image.styling_image.caption && <div dangerouslySetInnerHTML={{__html: image.styling_image.caption}} />}
             </div>
           ))

@@ -13,7 +13,7 @@ header {
   }
 }
 
-.headerContainer {
+.header-container {
   display: flex;
   font-size: 28px;
 }
@@ -63,7 +63,7 @@ header {
   a {
     text-decoration: none;
     &:hover,
-    &.is-acitve,
+    &.is-active,
     &:focus {
       text-decoration: none;
       color: black;
@@ -71,7 +71,7 @@ header {
   }
 }
 
-.mobileNav {
+.mobile-nav {
   background-color: transparent;
   display: block;
   height: 50px;
@@ -86,10 +86,17 @@ header {
     color: #000;
     text-decoration: none;
     margin-bottom: 2rem;
+    &.is-active {
+      color: $brand-primary;
+    }
+    &:focus {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
 
-.mobileNavName {
+.mobile-nav-name {
   left: 1rem;
   position: fixed;
   top: 1rem;
@@ -98,14 +105,5 @@ header {
     font-size: 23px !important;
     font-weight: normal;
     margin-bottom: 0 !important;
-  }
-}
-
-.mobileNavSocialMedia {
-  font-size: 1.5rem;
-  margin-top: 6rem;
-
-  a:not(:first-child) {
-    margin-left: 1.5rem;
   }
 }

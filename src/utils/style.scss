@@ -152,6 +152,23 @@ h2 {
       }
     }
   }
+  &.about-container {
+    .about-bottom-section {
+      margin-top: 2rem;
+      @include for-tablet-landscape-up {
+        display: flex;
+      }
+      .gatsby-image-outer-wrapper {
+        width: 100%;
+        max-width: 560px;
+        margin-top: 2rem;
+        @include for-tablet-landscape-up {
+          margin-top: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
 }
 
 .left-margin {

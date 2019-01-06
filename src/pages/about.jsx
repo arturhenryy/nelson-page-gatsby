@@ -1,33 +1,57 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import config from '../../config/SiteConfig';
-import styles from './about.module.scss';
+import Img from 'gatsby-image'
 
-const About = () => (
+const About = ({ data }) => {
+  const { page } = data
+  return (
   <div className="container about-container">
     <Helmet title={`About | ${config.siteTitle}`} />
     <div className="content">
       <div className="left-margin section pr-4">
-        <h2>About myself</h2>
+        <h2>{page.acf.headline}</h2>
         <p>
-        Nelson Heinemann is a fashion stylist and artist based in Munich, Germany working across europe.
-He worked for clients like Neue Züricher Zeitung, Condé Nast Germany, GLAMOUR Germany, VOGUE Germany, Süddeutsche Zeitung Magazin, INTERSECTION Magazine, HART, MYTHERESA.com, Herrlicher and others.
+          {page.acf.text}
         </p>
         <p className="mt-2">
-          For business inquiries: <br />
-          <a href="mailto:nelson.heinemann@gmail.com">nelson.heinemann@gmail.com </a>
+          {page.acf.contact_link_headline} <br />
+          <a href={`mailto:${page.acf.contact_link_mail}`}>{page.acf.contact_link_mail}</a>
         </p>
-        <div className={styles.aboutBottomSection}>
+        <div className="about-bottom-section">
           <p>
             <a href="https://www.instagram.com/nelsonheinemann/" rel="noopener noreferrer" target="_blank">
               Instagram
             </a>         
           </p>
-          <img src="./portrait.jpg" alt="portrait" />
+          <Img sizes={page.acf.about_image.localFile.childImageSharp.sizes} alt="Nelson Heinemann Portrait"/>
         </div>
       </div>
     </div>
   </div>
-);
+  )
+};
 
 export default About;
+
+export const query = graphql`
+  query aboutPageQuery {
+    page: wordpressPage(slug: {eq: "about"}) {
+      acf {
+        headline
+        text
+        contact_link_headline
+        contact_link_mail
+        about_image {
+          localFile {
+            childImageSharp {
+              sizes(maxWidth: 1366) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
