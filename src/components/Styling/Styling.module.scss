@@ -22,6 +22,9 @@
             }
             &:hover {
                 color: $brand-primary;
+                &:after {
+                    filter: none;
+                }
             }
         }
     }

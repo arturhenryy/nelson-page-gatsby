@@ -129,6 +129,11 @@ h2 {
       padding-left: 0;
       padding-right: 0;
     }
+    .exhibtion-list {
+      li {
+          margin-bottom: 0.5rem;
+      }
+  }
   }
   &.about-container {
     padding-left: 1rem;
@@ -204,7 +209,7 @@ h2 {
 .big-link {
   font-size: 1rem;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.1s ease;
   @include for-tablet-landscape-up {
     font-size: 28px;
   }
@@ -220,6 +225,12 @@ h2 {
   }
   &:hover {
     color: $brand-primary;
+    &:after {
+      content: "";
+      background: url("./arrow-right-green.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
 

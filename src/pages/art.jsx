@@ -2,7 +2,6 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Img from "gatsby-image"
 import config from '../../config/SiteConfig';
-import styles from './art.module.scss';
 
 export default ({ data }) => {
   const { page } = data
@@ -15,7 +14,7 @@ export default ({ data }) => {
       <div className="content">
         <div className="left-margin exhibtion-section section">
           <h2>Exhibitions</h2>
-          <ul className={styles.exhibtionList}>
+          <ul className="exhibition-list">
             {exhibitions.map((exhibtion, index) => (
               <li key={index}>{exhibtion.exhibition_year_and_title}</li>
             ))}
