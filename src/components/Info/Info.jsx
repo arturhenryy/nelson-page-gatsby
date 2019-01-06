@@ -7,7 +7,7 @@ const Info = ({aboutText}) => (
       {aboutText}
     </p>
     <a href="mailto:nelson.heinemann@gmail" className="big-link">
-      Say Hello
+      Say hello
     </a>
   </div>
 );

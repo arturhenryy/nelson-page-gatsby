@@ -34,13 +34,13 @@ export default class Navigation extends Component {
             </span>
           </div>
           <nav className={styles.navigation}>
-            <Link to="/styling" activeClassName="active">
+            <Link to="/styling" activeClassName="is-active">
               Styling
             </Link>
-            <Link to="/art" activeClassName="active">
+            <Link to="/art" activeClassName="is-active">
               Art & Exhibitions
             </Link>
-            <Link to="/about" activeClassName="active">
+            <Link to="/about" activeClassName="is-active">
               About
             </Link>
           </nav>

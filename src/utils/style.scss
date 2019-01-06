@@ -23,6 +23,24 @@ img {
   padding-bottom: 8rem;
 }
 
+.wrapper {
+  align-items: center;
+  display: flex;
+}
+
+a {
+  color: $body-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
+p {
+  line-height: 26px;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -95,11 +113,12 @@ img {
 h2 {
   font-size: 48px;
   margin-bottom: 2.5rem;
+  font-weight: normal;
 }
 
 .container {
   background: #ffffff;
-  padding-top: 9rem;
+  padding-top: 6rem;
   @include for-tablet-landscape-up {
     padding-top: 14rem;
   }
@@ -119,6 +138,20 @@ h2 {
       padding-right: 0;
     }
   }
+  &.styling-container {
+    .image-container {
+      p {
+        margin-left: 1rem;
+        font-size: 18px;
+        line-height: 22px;
+        @include for-tablet-landscape-up {
+          margin-left: 4rem;
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
 }
 
 .left-margin {
@@ -128,7 +161,7 @@ h2 {
 }
 
 .section {
-  margin-bottom: 9rem;
+  margin-bottom: 6rem;
   .big-link {
     margin-top: 1rem;
     display: inline-block;

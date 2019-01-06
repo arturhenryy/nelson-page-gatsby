@@ -1,18 +1,5 @@
 @import "../../../config/variables";
 
-.wrapper {
-  align-items: center;
-  display: flex;
-
-  a {
-    color: $body-color;
-
-    &:hover {
-      color: $brand-primary;
-    }
-  }
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -44,9 +31,12 @@ header {
   a {
     margin-right: 3rem;
     font-size: inherit;
+    padding-bottom: 3px;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    &.is-active,
     &:hover {
-      text-decoration: underline;
+      border-bottom: 2px solid black;
       color: inherit;
     }
     &:last-child {
@@ -73,8 +63,10 @@ header {
   a {
     text-decoration: none;
     &:hover,
+    &.is-acitve,
     &:focus {
       text-decoration: none;
+      color: black;
     }
   }
 }
@@ -104,6 +96,7 @@ header {
 
   h3 {
     font-size: 23px !important;
+    font-weight: normal;
     margin-bottom: 0 !important;
   }
 }

@@ -9,7 +9,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-react-router-scroll',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

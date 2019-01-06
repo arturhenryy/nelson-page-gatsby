@@ -11,7 +11,7 @@ const About = () => (
         <h2>About myself</h2>
         <p>
         Nelson Heinemann is a fashion stylist and artist based in Munich, Germany working across europe.
-He worked for clients like Neue Züricher Zeitung, Condé Nast Germany, GLAMOUR Germany, VOGUE Germany, Süddeutsche Zeitung Magazin, INTERSECTION Magazine, HART, MYTHERESA.com, Herrlicher and many others.
+He worked for clients like Neue Züricher Zeitung, Condé Nast Germany, GLAMOUR Germany, VOGUE Germany, Süddeutsche Zeitung Magazin, INTERSECTION Magazine, HART, MYTHERESA.com, Herrlicher and others.
         </p>
         <p className="mt-2">
           For business inquiries: <br />
@@ -19,15 +19,9 @@ He worked for clients like Neue Züricher Zeitung, Condé Nast Germany, GLAMOUR 
         </p>
         <div className={styles.aboutBottomSection}>
           <p>
-            <span>Social Media:</span>
-            <br />
             <a href="https://www.instagram.com/nelsonheinemann/" rel="noopener noreferrer" target="_blank">
               Instagram
-            </a>
-            <br />
-            <a href="https://www.facebook.com/nelson.heinemann" rel="noopener noreferrer" target="_blank">
-              Facebook
-            </a>           
+            </a>         
           </p>
           <img src="./portrait.jpg" alt="portrait" />
         </div>
