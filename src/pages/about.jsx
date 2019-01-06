@@ -25,6 +25,7 @@ const About = ({ data }) => {
             </a>         
           </p>
           <Img sizes={page.acf.about_image.localFile.childImageSharp.sizes} alt="Nelson Heinemann Portrait"/>
+          <img className="overlay-icon" src="/info.png" alt="Nelson Heinemann Logo"/>
         </div>
       </div>
     </div>

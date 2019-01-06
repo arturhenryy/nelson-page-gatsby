@@ -1,6 +1,7 @@
 @import "../../../config/variables";
 
 .footer {
+  z-index: 2;
   padding: 4rem 1rem 7rem 1rem;
   background: url('/footer.png');
   background-size: cover;

@@ -159,9 +159,19 @@ h2 {
   }
   &.about-container {
     .about-bottom-section {
+      position: relative;
       margin-top: 2rem;
       @include for-tablet-landscape-up {
         display: flex;
+      }
+      .overlay-icon {
+        position: absolute;
+        top: 50px;
+        pointer-events: none;
+        @include for-tablet-landscape-up {
+          top: -200px;
+        }
+
       }
       .gatsby-image-outer-wrapper {
         width: 100%;
