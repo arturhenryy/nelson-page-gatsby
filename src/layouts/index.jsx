@@ -15,9 +15,15 @@ const MainLayout = props => {
       <Helmet>
         <title>{config.siteTitle}</title>
         <meta name="description" content={config.siteDescription} />
-        <meta name="image" content={config.siteSeoDefaultImage} />
+        <meta name="image" content={config.siteDefaultImage} />
+        <meta property="og:url"                content="https://nelsonheinemann.com" />
+        <meta property="og:type"               content="article" />
+        <meta property="og:title"              content={config.siteTitle} />
+        <meta property="og:description"        content={config.siteDescription} />
+        <meta property="og:image"              content={config.siteDefaultImage} />
         <link rel="shortcut icon" href={favicon} />
         <link rel="apple-touch-icon" href={appleTouchIcon} />
+        
       </Helmet>
       <Navigation />
       {children()}

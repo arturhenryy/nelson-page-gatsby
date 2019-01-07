@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: 'https://nelson-heinemann.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDefaultImage: '/logos/logo.png', // Used for SEO and manifest
+  siteDefaultImage: '/fb-cover.png', // Used for SEO and manifest
   siteDescription: 'Nelson Heinemann is a fashion stylist and artist based in Munich, Germany working across europe.',
   // og: Meta Tags
   ogSiteName: 'Nelson Heinemann', // Facebook Site Name
