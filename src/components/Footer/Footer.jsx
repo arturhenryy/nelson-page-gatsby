@@ -31,7 +31,7 @@ const Footer = () => (
       </ul>
       <ul>
         <li>
-          <a href="mailto:nelson.heinemann@gmail">E-Mail</a>
+          <a href="mailto:nelson.heinemann@gmail.com">E-Mail</a>
         </li>
         <li>
           <a href="https://www.instagram.com/nelsonheinemann/" rel="noopener noreferrer" target="_blank">
