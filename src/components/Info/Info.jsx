@@ -6,7 +6,7 @@ const Info = ({aboutText}) => (
     <p>
       {aboutText}
     </p>
-    <a href="mailto:nelson.heinemann@gmail" className="big-link">
+    <a href="mailto:nelson.heinemann@gmail.com" className="big-link">
       Say hello
     </a>
   </div>
