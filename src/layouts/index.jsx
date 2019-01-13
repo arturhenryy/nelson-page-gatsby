@@ -16,6 +16,7 @@ const MainLayout = props => {
         <title>{config.siteTitle}</title>
         <meta name="description" content={config.siteDescription} />
         <meta name="image" content={config.siteDefaultImage} />
+        <meta name="google-site-verification" content="R5ehukCdMaX4yvherINAHuMBDZ1jYnW4C3_dbg1R2eU" />
         <meta property="og:url"                content="https://nelsonheinemann.com" />
         <meta property="og:type"               content="article" />
         <meta property="og:title"              content={config.siteTitle} />

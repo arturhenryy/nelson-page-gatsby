@@ -9,7 +9,7 @@ const Imprint = ({data}) => {
   return (
     <div className="imprint-container container">
       <Helmet>
-        <title>{config.siteTitle}</title>
+        <title>{`Imprint ${config.siteTitle}`}</title>
       </Helmet>
       <div className="content">
         <div className="left-margin section pr-4">

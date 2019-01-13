@@ -11,7 +11,7 @@ export default ({ data }) => {
 
   return (
     <div className="container styling-container">
-      <Helmet title={`Contact | ${config.siteTitle}`} />
+      <Helmet title={`Styling | ${config.siteTitle}`} />
       <div className="content">
         <div className="styling-container">
         {

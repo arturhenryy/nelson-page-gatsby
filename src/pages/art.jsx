@@ -10,7 +10,7 @@ export default ({ data }) => {
   const artProjects = page.acf.art_projects
   return (
     <div className="container art-container">
-      <Helmet title={`Contact | ${config.siteTitle}`} />
+      <Helmet title={`Art | ${config.siteTitle}`} />
       <div className="content">
         <div className="left-margin exhibtion-section section">
           <h2>Exhibitions</h2>
