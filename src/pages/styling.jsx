@@ -7,7 +7,6 @@ export default ({ data }) => {
 
   const { page } = data
   const stylingImages = page.acf.styling_images
-  const stylingImagesMobile = page.acf.styling_images_mobile
 
   return (
     <div className="container styling-container">

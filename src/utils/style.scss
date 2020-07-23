@@ -136,9 +136,20 @@ h2 {
     }
     .section {
       margin-bottom: 0;
-      &:first-child,
-      &:nth-child(2), 
-      &:nth-child(3) {
+      figure {
+        margin: 0;
+        figcaption {
+          font-size: 18px;
+          line-height: 22px;
+          margin: 1rem 1rem;
+          @include for-tablet-landscape-up {
+            margin-left: 4rem;
+            font-size: 22px;
+            line-height: 26px;
+          }
+        }
+      }
+      &:first-child {
         margin-bottom: 6rem;
       }
     }
@@ -146,9 +157,9 @@ h2 {
   &.styling-container {
     .image-container {
       p {
-        margin-left: 1rem;
         font-size: 18px;
         line-height: 22px;
+        margin: 1rem 1rem;
         @include for-tablet-landscape-up {
           margin-left: 4rem;
           font-size: 22px;
